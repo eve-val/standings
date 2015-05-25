@@ -1,0 +1,15 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  <form action="" method="post" name="add_standing">
+      {{ form.hidden_tag() }}
+      <p>
+          Standing Type: {{ form.entity_type }}<br>
+					Standing: {{ form.standing }}
+          Search: {{ form.search_text(size=80) }}<br>
+      </p>
+      <p>{{ form.add_by_id }} {{ form.add_by_name }} {{ form.add_by_ticker }}</p>
+  </form>
+{% endblock %}

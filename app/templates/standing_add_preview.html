@@ -1,0 +1,23 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Add Standing</h1>
+  <form action="" method="post" name="do_add_login">
+      {{ form.hidden_tag() }}
+			{{ form.entity_type }}
+			{{ form.standing }}
+      <p>
+					Standing: {{ standing }}<br>
+          {{ entity_type }} id: {{ entity_id }}<br>
+					{% if corporation_ticker %}
+          Corporation Name: {{ corporation_name }}<br>
+          Corporation Ticker: {{ corporation_ticker }}<br>
+					In<br>
+					{% endif %}
+          Alliance Name: {{ alliance_name }}<br>
+          Alliance Ticker: {{ alliance_ticker }}<br>
+      </p>
+      <p><input type="submit" value="Add Standing"></p>
+  </form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Alliance Ticker</th>
+			<th>Alliance Name</th>
+			<th>Corp Ticker</th>
+			<th>Corp Name</th>
+			<th>Standing</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for standing in standings %}
+		<tr>
+			<td>{{ standing.alliance and standing.alliance.ticker }}</td>
+			<td>{{ standing.alliance and standing.alliance.name }}</td>
+			<td>{{ standing.corporation and standing.corporation.ticker }}</td>
+			<td>{{ standing.corporation and standing.corporation.name }}</td>
+			<td>{{ standing.standing }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
