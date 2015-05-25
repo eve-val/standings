@@ -1,0 +1,21 @@
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
+
+SERVER_NAME = 'dev.local:5000'
+
+WTF_CSRF_ENABLED = True
+SECRET_KEY = 'abcdefghijklmnopqrstuvwxyz0123456789'
+
+SQLALCHEMY_DATABASE_URI = 'mysql://username:password@host/database'
+SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'migrations')
+
+CORE_ENDPOINT = 'https://auth.example.com/api'
+CORE_APP_ID = '12345'
+CORE_PRIVATE_KEY = '0123456789abcdef'
+CORE_CORE_PUBLIC_KEY = 'fedcba9876543210'
+
+CORE_ADMIN_PERMISSION = 'standings-admin'
+CORE_EDIT_PERMISSION = 'standings-edit'
+CORE_VIEW_PERMISSION = 'standings-view'
+
+STANDINGS_VALID_VALUES = ['+10', '+5', '+2.5', '+1.1', '0', '-5', '-10']
