@@ -1,0 +1,10 @@
+pip install flask
+pip install flask-wtf
+pip install flask-mysql
+pip install flask-sqlalchemy
+pip install sqlalchemy-migrate
+
+pip install evelink
+
+# For BRAVE API
+pip install requests
